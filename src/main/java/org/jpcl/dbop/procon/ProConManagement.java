@@ -9,7 +9,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * 生产者消费者管理器 用来统一规划
  * @author Administrator
  */
-public class ProConManagement<T> {
+public class ProConManagement {
 
     private final static Logger logger = LoggerFactory.getLogger(ProConManagement.class);
     private static CopyOnWriteArrayList<AbstractConsumer> consumers;
@@ -21,7 +21,7 @@ public class ProConManagement<T> {
         producers = new CopyOnWriteArrayList<>();
     }
 
-    public ProConManagement(JcCache<T> cache) {
+    public static <T> void initProConManagement(JcCache<T> cache) {
         ProConManagement.cache = cache;
     }
 

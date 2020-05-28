@@ -13,7 +13,7 @@ import org.jpcl.dbop.procon.producer.DemoProducer;
 public class DemoProCon {
     public static void main(String[] args) {
         JcCache<Auth> cache = new LinkedBlockingQueueCache();
-        ProConManagement proConManagement = new ProConManagement(cache);
+        ProConManagement.initProConManagement(cache);
         DemoProducer p = new DemoProducer();
         ProConManagement.addProducer(p);
         DemoConsumer c = new DemoConsumer();

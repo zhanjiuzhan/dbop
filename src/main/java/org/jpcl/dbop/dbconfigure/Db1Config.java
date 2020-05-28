@@ -18,7 +18,7 @@ import javax.sql.DataSource;
  * @author Administrator
  */
 @Configuration
-@MapperScan(basePackages = "org.jpcl.dbop.dao.db1", sqlSessionTemplateRef = "db1SqlSessionTemplate")
+@MapperScan(basePackages = "org.jpcl.dbop.dao.mysql.db1", sqlSessionTemplateRef = "db1SqlSessionTemplate")
 public class Db1Config {
 
     /**
@@ -29,6 +29,7 @@ public class Db1Config {
     @ConfigurationProperties(prefix = "spring.datasource.db1")
     @Primary
     public DataSource testDataSource() {
+
         return DataSourceBuilder.create().build();
     }
 

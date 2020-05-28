@@ -1,7 +1,7 @@
 package org.jpcl.dbop.demo.controller;
 
-import org.jpcl.dbop.dao.db1.NoteMapper;
-import org.jpcl.dbop.dao.db2.AuthMapper;
+import org.jpcl.dbop.dao.mysql.db1.NoteMapper;
+import org.jpcl.dbop.dao.mysql.db2.AuthMapper;
 import org.jpcl.dbop.model.Auth;
 import org.jpcl.dbop.model.Note;
 import org.springframework.beans.factory.annotation.Autowired;
