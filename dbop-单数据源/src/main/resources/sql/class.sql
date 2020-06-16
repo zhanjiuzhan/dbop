@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS class (
+   id int NOT NULL AUTO_INCREMENT,
+   name varchar(32) NULL DEFAULT '',
+   PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

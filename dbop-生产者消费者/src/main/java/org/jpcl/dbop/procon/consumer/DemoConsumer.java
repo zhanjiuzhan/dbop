@@ -1,12 +1,11 @@
 package org.jpcl.dbop.procon.consumer;
 
-import org.jpcl.dbop.model.Auth;
 import org.jpcl.dbop.procon.AbstractConsumer;
 
 /**
  * @author Administrator
  */
-public class DemoConsumer extends AbstractConsumer<Auth> {
+public class DemoConsumer<Auth> extends AbstractConsumer<Auth> {
     public DemoConsumer() {
         super(DemoConsumer.class.getName());
     }

@@ -1,6 +1,6 @@
 package org.jpcl.dbop.demo.procon;
 
-import org.jpcl.dbop.model.Auth;
+import org.jpcl.dbop.demo.model.Auth;
 import org.jpcl.dbop.procon.JcCache;
 import org.jpcl.dbop.procon.ProConManagement;
 import org.jpcl.dbop.procon.cache.queue.LinkedBlockingQueueCache;

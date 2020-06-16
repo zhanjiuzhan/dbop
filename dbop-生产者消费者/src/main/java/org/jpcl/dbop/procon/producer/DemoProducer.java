@@ -1,6 +1,7 @@
 package org.jpcl.dbop.procon.producer;
 
-import org.jpcl.dbop.model.Auth;
+
+import org.jpcl.dbop.demo.model.Auth;
 import org.jpcl.dbop.procon.AbstractProducer;
 
 /**

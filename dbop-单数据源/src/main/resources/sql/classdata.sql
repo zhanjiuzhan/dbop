@@ -1,0 +1,1 @@
+INSERT INTO class(name) SELECT 'class01' FROM DUAL WHERE NOT EXISTS(SELECT name from class where name="class01");

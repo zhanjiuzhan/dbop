@@ -1,0 +1,31 @@
+# 配置是没有使用数据库连接池的
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dbop?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 950828
+    # sql文件的编码
+    sql-script-encoding: utf-8
+    # 初始化就要执行
+    initialization-mode: always
+    # 遇到错误不继续执行
+    continue-on-error: false
+    # 启动时初始化表结构
+    schema:
+        - classpath:sql/user.sql
+        - classpath:sql/class.sql
+    # 启动时初始化表数据
+    data:
+        - classpath:sql/userdata.sql
+        - classpath:sql/classdata.sql
+    #data-password:
+    #data-username:
+    #schema-password:
+    #schema-username:
+    # sql文件的分割符
+    separator: ;
+mybatis:
+  type-aliases-package: org.jpcl.dbop.dao.mapper

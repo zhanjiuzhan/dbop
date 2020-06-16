@@ -1,0 +1,1 @@
+INSERT INTO user(name) SELECT 'chenglei' FROM DUAL WHERE NOT EXISTS(SELECT name from user where name="chenglei");
