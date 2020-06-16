@@ -1,5 +1,8 @@
 package org.jpcl.dbop.model;
 
+/**
+ * @author Administrator
+ */
 public class User {
     private String name;
     private String id;

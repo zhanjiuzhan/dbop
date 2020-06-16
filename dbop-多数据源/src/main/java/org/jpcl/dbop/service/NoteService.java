@@ -1,12 +1,12 @@
 package org.jpcl.dbop.service;
 
-import org.jpcl.dbop.model.User;
+import org.jpcl.dbop.model.Note;
 
 import java.util.List;
 
 /**
  * @author Administrator
  */
-public interface UserService {
-    List<User> get();
+public interface NoteService {
+    List<Note> get();
 }

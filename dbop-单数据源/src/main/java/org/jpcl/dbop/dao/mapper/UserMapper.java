@@ -6,6 +6,9 @@ import org.jpcl.dbop.model.User;
 
 import java.util.List;
 
+/**
+ * @author Administrator
+ */
 @Mapper
 public interface UserMapper {
 

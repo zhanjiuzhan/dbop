@@ -6,6 +6,9 @@ import org.jpcl.dbop.model.ClassModel;
 
 import java.util.List;
 
+/**
+ * @author Administrator
+ */
 @Mapper
 public interface ClassMapper {
     @Select("SELECT * FROM class")

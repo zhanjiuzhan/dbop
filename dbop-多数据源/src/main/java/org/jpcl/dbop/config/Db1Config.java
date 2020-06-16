@@ -1,4 +1,4 @@
-package org.jpcl.dbop.dbconfigure;
+package org.jpcl.dbop.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -18,7 +18,7 @@ import javax.sql.DataSource;
  * @author Administrator
  */
 @Configuration
-@MapperScan(basePackages = "org.jpcl.dbop.dao.mysql.db1", sqlSessionTemplateRef = "db1SqlSessionTemplate")
+@MapperScan(basePackages = "org.jpcl.dbop.dao.db1", sqlSessionTemplateRef = "db1SqlSessionTemplate")
 public class Db1Config {
 
     /**

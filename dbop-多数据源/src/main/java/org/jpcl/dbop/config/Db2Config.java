@@ -1,4 +1,4 @@
-package org.jpcl.dbop.dbconfigure;
+package org.jpcl.dbop.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -17,7 +17,7 @@ import javax.sql.DataSource;
  * @author Administrator
  */
 @Configuration
-@MapperScan(basePackages = "org.jpcl.dbop.dao.mysql.db2", sqlSessionTemplateRef = "db2SqlSessionTemplate")
+@MapperScan(basePackages = "org.jpcl.dbop.dao.db2", sqlSessionTemplateRef = "db2SqlSessionTemplate")
 public class Db2Config {
     /**
      * 生成数据源.  @Primary 注解声明为默认数据源

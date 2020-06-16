@@ -1,4 +1,4 @@
-package org.jpcl.dbop.dbconfigure;
+package org.jpcl.dbop.config;
 
 
 import org.apache.ibatis.session.Configuration;

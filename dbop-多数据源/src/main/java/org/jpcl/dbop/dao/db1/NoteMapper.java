@@ -1,4 +1,4 @@
-package org.jpcl.dbop.dao.mysql.db1;
+package org.jpcl.dbop.dao.db1;
 
 import org.apache.ibatis.annotations.Select;
 import org.jpcl.dbop.model.Note;

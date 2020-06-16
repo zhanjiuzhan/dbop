@@ -1,0 +1,55 @@
+# 配置是没有使用数据库连接池的
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dbop?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 950828
+  # type: 数据库连接吃的包路径
+    # 使用默认的数据库连接池
+    #   springboot1 : org.apache.tomcat.jdbc.pool.DataSource  使用的是tomcat
+  # tomcat
+      # 维持的最大连接数
+      # max-active: 20
+      # 最多位置的空闲连接
+      # max-idle: 6
+      # 及时没有需求也要最少维持的连接数
+      # min-idle: 2
+      # 启动时初始化的连接数
+      # initial-size: 4
+      # 单位毫秒 连接借用出去的时间 在时间内未归还连接 则报错
+      # max-wait: 10000
+      # 当前时间 - 创建时间 > max-age  删除连接创建新的
+      # max-age: 100
+      # 检查连接可用性的语句
+      # validation-query: "SELECT 1"
+      # 执行连接检查语句的时间 毫秒
+      # validation-query-timeout: 10000
+      # 借出时检查连接可用性
+      # test-on-borrow: true
+      # 连接初始化时检查连接可用性
+      # test-on-connect: true
+      # 客户端归还时 检查连接可用性
+      # test-on-return: true
+      # 检查闲置连接时 检查连接可用性
+      # test-while-idle: true
+    # 使用其它的数据库连接池
+    #   springboot2 : com.zaxxer.hikari.HikariDataSource  使用的是hikari
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: 'hikari'
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: 'SELECT 1'
+
+# 使用druid数据库连接池
+# https://www.cnblogs.com/tianphone/p/10756669.html
+# https://blog.csdn.net/u012946310/article/details/82318439?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2
+
+mybatis:
+  type-aliases-package: org.jpcl.dbop.dao.mapper

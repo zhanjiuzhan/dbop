@@ -1,9 +1,10 @@
-package org.jpcl.dbop.demo.controller;
+package org.jpcl.dbop.controller;
 
-import org.jpcl.dbop.dao.mysql.db1.NoteMapper;
-import org.jpcl.dbop.dao.mysql.db2.AuthMapper;
+
 import org.jpcl.dbop.model.Auth;
 import org.jpcl.dbop.model.Note;
+import org.jpcl.dbop.service.AuthService;
+import org.jpcl.dbop.service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,19 +18,19 @@ import java.util.List;
 public class NoteController {
 
     @Autowired
-    private NoteMapper noteMapper;
+    private NoteService noteService;
 
     @Autowired
-    private AuthMapper authMapper;
+    private AuthService authService;
 
     @RequestMapping("/getNote")
     public List<Note> getNote() {
-        return noteMapper.get();
+        return noteService.get();
     }
 
     @RequestMapping("/getAuth")
     public List<Auth> getAuth() {
-        return authMapper.get();
+        return authService.get();
     }
 
     @CrossOrigin
