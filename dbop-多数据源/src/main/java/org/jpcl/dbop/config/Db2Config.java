@@ -1,12 +1,12 @@
 package org.jpcl.dbop.config;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -25,7 +25,7 @@ public class Db2Config {
     @Bean(name = "db2DataSource")
     @ConfigurationProperties(prefix = "spring.datasource.db2")
     public DataSource getDataSource() {
-        return DataSourceBuilder.create().build();
+        return new DruidDataSource();
     }
 
     /**

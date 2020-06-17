@@ -48,8 +48,6 @@ spring:
       connection-test-query: 'SELECT 1'
 
 # 使用druid数据库连接池
-# https://www.cnblogs.com/tianphone/p/10756669.html
-# https://blog.csdn.net/u012946310/article/details/82318439?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2
 
 mybatis:
   type-aliases-package: org.jpcl.dbop.dao.mapper
