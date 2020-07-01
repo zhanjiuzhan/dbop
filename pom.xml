@@ -12,6 +12,9 @@
         <module>dbop-单数据源</module>
         <module>dbop-生产者消费者</module>
         <module>dbop-多数据源</module>
+        <module>dbop-事务</module>
+        <module>dbop-多数据源事务</module>
+        <module>dbop-redis使用</module>
     </modules>
     <!--
     依赖管理器 管理boot需要的所有依赖，从而统一各种jar的版本号，避免了版本不一致而出现的问题
@@ -35,6 +38,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
     </dependencies>
 </project>

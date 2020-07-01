@@ -1,0 +1,21 @@
+# 配置是没有使用数据库连接池的
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dbop?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 950828
+    hikari:
+      minimum-idle: 2
+      maximum-pool-size: 5
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: 'hikari'
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: 'SELECT 1'
+
+mybatis:
+  type-aliases-package: org.jpcl.dbop.dao.mapper

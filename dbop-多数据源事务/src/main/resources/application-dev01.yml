@@ -1,0 +1,14 @@
+# driver-class-name 5版本以上 com.mysql.cj.jdbc.Driver 原来是: com.mysql.jdbc.Driver 这个都没有啥影响
+# 单数据源 写url，多数据源修改为jdbc-url
+spring:
+  datasource:
+    db1:
+      username: root
+      password: 950828
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/cltest?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    db2:
+      username: root
+      password: 950828
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/dbop?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
