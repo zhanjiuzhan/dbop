@@ -9,9 +9,24 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dbop-redis使用</artifactId>
+    <artifactId>dbop-redis作为缓存</artifactId>
 
     <dependencies>
+
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+        </dependency>
+
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
         <!--redis 缓存的引入-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

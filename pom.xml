@@ -15,6 +15,7 @@
         <module>dbop-事务</module>
         <module>dbop-多数据源事务</module>
         <module>dbop-redis使用</module>
+        <module>dbop-redis作为缓存</module>
     </modules>
     <!--
     依赖管理器 管理boot需要的所有依赖，从而统一各种jar的版本号，避免了版本不一致而出现的问题

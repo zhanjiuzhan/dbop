@@ -15,4 +15,11 @@ public class Hobby implements Serializable  {
     public void setDes(String des) {
         this.des = des;
     }
+
+    @Override
+    public String toString() {
+        return "Hobby{" +
+                "des='" + des + '\'' +
+                '}';
+    }
 }

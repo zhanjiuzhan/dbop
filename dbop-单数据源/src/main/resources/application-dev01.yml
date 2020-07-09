@@ -29,3 +29,7 @@ spring:
     separator: ;
 mybatis:
   type-aliases-package: org.jpcl.dbop.dao.mapper
+  #开启驼峰转换规则
+  configuration:
+    map-underscore-to-camel-case:
+      true
