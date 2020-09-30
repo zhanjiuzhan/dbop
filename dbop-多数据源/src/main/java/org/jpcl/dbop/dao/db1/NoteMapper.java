@@ -9,7 +9,6 @@ import java.util.List;
 /**
  * @author Administrator
  */
-@Qualifier("db1SqlSessionTemplate")
 public interface NoteMapper {
 
     @Select("select * from note")

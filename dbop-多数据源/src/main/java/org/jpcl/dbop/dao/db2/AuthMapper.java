@@ -9,7 +9,6 @@ import java.util.List;
 /**
  * @author Administrator
  */
-@Qualifier("db2SqlSessionTemplate")
 public interface AuthMapper {
 
     @Select("select * from auth")
