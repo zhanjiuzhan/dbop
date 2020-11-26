@@ -12,6 +12,16 @@
     <artifactId>dbop-多数据源事务</artifactId>
 
     <dependencies>
+       <!-- 核心的spring boot依赖 -->
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-web</artifactId>
+       </dependency>
+
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-test</artifactId>
+       </dependency>
         <!-- json转换 -->
         <dependency>
             <groupId>com.alibaba</groupId>

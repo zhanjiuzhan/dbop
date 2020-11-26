@@ -17,6 +17,8 @@
         <module>dbop-redis使用</module>
         <module>dbop-redis作为缓存</module>
         <module>dbop-cache的使用</module>
+        <module>dbop-redis集成</module>
+        <module>dbop-redis自定义多数据源</module>
     </modules>
     <!--
     依赖管理器 管理boot需要的所有依赖，从而统一各种jar的版本号，避免了版本不一致而出现的问题
@@ -34,17 +36,4 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
-
-    <dependencies>
-        <!-- 核心的spring boot依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-    </dependencies>
 </project>

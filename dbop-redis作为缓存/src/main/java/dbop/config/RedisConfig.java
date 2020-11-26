@@ -78,7 +78,7 @@ public class RedisConfig {
 
         //根据配置和客户端配置创建连接
         LettuceConnectionFactory lettuceConnectionFactory = new LettuceConnectionFactory(redisConfiguration, lettuceClientConfiguration);
-        lettuceConnectionFactory .afterPropertiesSet();
+        lettuceConnectionFactory.afterPropertiesSet();
         return lettuceConnectionFactory;
     }
 

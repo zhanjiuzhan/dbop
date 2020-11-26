@@ -1,0 +1,29 @@
+spring:
+  multiple-redis:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+    redis1:
+      cluster:
+        max-redirects: 10
+        nodes:
+          - 192.168.88.127:6381
+          - 192.168.88.127:6382
+          - 192.168.88.127:6383
+          - 192.168.88.127:6384
+          - 192.168.88.127:6385
+          - 192.168.88.127:6386
+    redis2:
+      sentinel:
+        master: mymaster
+        nodes:
+          - 192.168.88.128:26379
+          - 192.168.88.128:26380
+      lettuce:
+        pool:
+          max-active: 8
+          max-wait: -1ms
+          max-idle: 8
+          min-idle: 0
+
+
