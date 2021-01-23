@@ -15,6 +15,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class DefaultCacheService {
 
+
+    @Cacheable(value = "cache1", key = "#content")
+    public String get(String content) {
+        System.out.println(content);
+        return method1(content).toString();
+    }
+
     /**
      * Cacheable
      *    value属性是必须指定 表示当前方法的返回值是会被缓存在哪个Cache上 对应Cache的名称 其可以是一个Cache也可以是多个Cache，当需要指定多个Cache时其是一个数组。

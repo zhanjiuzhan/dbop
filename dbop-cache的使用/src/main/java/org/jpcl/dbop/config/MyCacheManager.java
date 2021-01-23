@@ -21,7 +21,6 @@ import static org.springframework.data.redis.cache.RedisCacheConfiguration.defau
 /**
  * @author Administrator
  */
-@Configuration
 public class MyCacheManager extends CachingConfigurerSupport {
 
     @Autowired
@@ -55,11 +54,10 @@ public class MyCacheManager extends CachingConfigurerSupport {
         jackson2JsonRedisSerializer.setObjectMapper(om);
 
         RedisCacheConfiguration cacheConfiguration = defaultCacheConfig()
+             // 不缓存空值
              .disableCachingNullValues()
-             .serializeKeysWith(RedisSerializationContext.SerializationPair
-             .fromSerializer(new StringRedisSerializer()))
-             .serializeValuesWith(RedisSerializationContext.SerializationPair
-                 .fromSerializer(jackson2JsonRedisSerializer));
+             .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))
+             .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(jackson2JsonRedisSerializer));
         return RedisCacheManager.builder(factory).cacheDefaults(cacheConfiguration).build();
     }
 
